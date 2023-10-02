@@ -19,21 +19,52 @@
             <label>¿Pertenece usted a alguna institución pública?</label>
             <div>
                 <label>Sí</label>
-                <input type="radio" name="pertenece_institucion_publica">
+                <input
+                    type="radio"
+                    name="pertenece_institucion_publica"
+                    value="si"
+                >
                 <label>No</label>
-                <input type="radio" name="pertenece_institucion_publica">
+                <input
+                    type="radio"
+                    name="pertenece_institucion_publica"
+                    value="no"
+                >
+                <div
+                style="display:none; margin-top:1.5rem;"
+                id="inputDisabledInstitution"
+                >
+                    <label>Especifique:</label>
+                    <input
+                    type="text"
+                    name="institucion_publica"
+                    defaultValue="no aplica"
+                >
+                </div>
             </div>
             <label>Ingrese su número de certificación:</label>
             <input type="text" name="numero_certificacion" required>
             <label>¿Es usted dermatólogo pediatra?</label>
             <div>
                 <label>Sí</label>
-                <input type="radio" name="es_dermatologo">
+                <input type="radio" name="es_dermatologo" value="si">
                 <label>No</label>
-                <input type="radio" name="es_dermatologo">
+                <input type="radio" name="es_dermatologo" value="no">
+                <div
+                style="display:none; margin-top:1.5rem;"
+                id="inputDisabledProfession"
+                >
+                    <label>Especifique:</label>
+                    <input
+                    type="text"
+                    name="institucion_publica"
+                    defaultValue="no aplica"
+                >
+                </div>
             </div>
             <button>Registrarse</button>
         </form>
     </section>
+    <script src="./scripts/checkedInput.js"></script>
 </body>
 </html>
