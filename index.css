@@ -19,3 +19,12 @@ body{
     justify-content: center;
     text-align: center;
 }
+.next img{
+    width:40%;
+}
+
+@media (min-width:240px) and (max-width:880px){
+    .next img{
+        width:90%;
+    }
+}
