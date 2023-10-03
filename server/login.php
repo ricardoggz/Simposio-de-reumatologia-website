@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
@@ -20,12 +22,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $correo = $_POST['correo'];
     $contrasena = $_POST['contrasena'];
 
-    // Consulta SQL para verificar las credenciales del usuario
     $sql = "SELECT * FROM estudiantes WHERE correo = '$correo' AND contrasena='$contrasena'";
     $result = mysqli_query($conn, $sql);
 
     if ($result && mysqli_num_rows($result) > 0) {
-        header("Location: ../simposio-internacional-reumatologia-pediatrica.html"); // Redirige a la página de inicio después del inicio de sesión
+        $_SESSION['correo'] = $correo;
+        $_SESSION['contrasena'] = $contrasena;
+        header("Location: ../simposio-internacional-reumatologia-pediatrica.php");
         exit();
     } else {
         echo "Usuario no encontrado.";

@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
@@ -54,7 +56,9 @@ VALUES(
 ";
 
 if (mysqli_query($conn, $sql)) {
-    header("Location: ../simposio-internacional-reumatologia-pediatrica.html");
+    $_SESSION['correo'] = $correo;
+    $_SESSION['contrasena'] = $contrasena;
+    header("Location: ../simposio-internacional-reumatologia-pediatrica.php");
 } else {
     echo "Error al insertar datos: " . mysqli_error($conn);
 }
