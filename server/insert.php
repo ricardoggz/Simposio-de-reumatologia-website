@@ -1,4 +1,10 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
+header("Access-Control-Allow-Credentials: true");
+header("Access-Control-Max-Age: 3600");
+
 $servername = "mysql-courses-database.alwaysdata.net";
 $username = "297416_cursos";
 $password = "Anotherbrickinthewall_10";
@@ -12,17 +18,19 @@ if (!$conn) {
 
 $nombre = $_POST["nombre"];
 $correo = $_POST["correo"];
+$contrasena = $_POST["contrasena"];
 $lugar_procedencia= $_POST["lugar_procedencia"];
 $pertenece_institucion_publica = $_POST["pertenece_institucion_publica"];
 $institucion_publica= $_POST["institucion_publica"];
 $numero_certificacion= $_POST["numero_certificacion"];
 $es_dermatologo= $_POST["es_dermatologo"];
 $especialidad = $_POST["especialidad"];
-$fecha_registro;
+$fecha_registro = date("Y-m-d");
 
 $sql = "INSERT INTO estudiantes(
     nombre,
     correo,
+    contrasena,
     lugar_procedencia,
     pertenece_institucion_publica,
     institucion_publica,
@@ -34,6 +42,7 @@ $sql = "INSERT INTO estudiantes(
 VALUES(
     '$nombre',
     '$correo',
+    '$contrasena',
     '$lugar_procedencia',
     '$pertenece_institucion_publica',
     '$institucion_publica',
@@ -41,7 +50,6 @@ VALUES(
     '$es_dermatologo',
     '$especialidad',
     '$fecha_registro'
-
 )
 ";
 

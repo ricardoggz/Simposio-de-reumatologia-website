@@ -15,7 +15,7 @@ for (var i = 0; i < radioInstitution.length; i++) {
 
 for (var i = 0; i < radioProfession.length; i++) {
     radioProfession[i].addEventListener('change', function() {
-    if (this.value === 'si') {
+    if (this.value === 'no') {
         inputDisabledProfession.style.display = 'block';
     } else {
         inputDisabledProfession.style.display = 'none';

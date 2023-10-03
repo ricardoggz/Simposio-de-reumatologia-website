@@ -9,13 +9,15 @@
 <body>
     <section class="next">
         <h1>Regístrate a el 1er simposio internacional de reumatologia pediátrica</h1>
-        <form action="" class="form">
+        <form action="https://simposio-internacional-de-reumatologia-pediatrica.him.edu.mx/server/insert.php" method="POST" class="form">
             <label>Nombre:</label>
-            <input type="text" name="nombre" required>
+            <input type="text" name="nombre" required/>
             <label>Correo:</label>
-            <input type="text" name="correo" required>
+            <input type="email" name="correo" required/>
+            <label>Contraseña:</label>
+            <input type="password" name="contrasena" required/>
             <label>Lugar de procedencia:</label>
-            <input type="text" name="lugar_procedencia" required>
+            <input type="text" name="lugar_procedencia" required/>
             <label>¿Pertenece usted a alguna institución pública?</label>
             <div>
                 <label>Sí</label>
@@ -23,43 +25,45 @@
                     type="radio"
                     name="pertenece_institucion_publica"
                     value="si"
-                >
+                />
                 <label>No</label>
                 <input
                     type="radio"
                     name="pertenece_institucion_publica"
                     value="no"
-                >
-                <div
-                style="display:none; margin-top:1.5rem;"
-                id="inputDisabledInstitution"
-                >
-                    <label>Especifique:</label>
-                    <input
-                    type="text"
-                    name="institucion_publica"
-                    defaultValue="no aplica"
-                >
-                </div>
+                />
+            </div>
+            <div
+            style="display:none; margin-top:1.5rem;"
+            id="inputDisabledInstitution"
+            >
+                <label>Especifique su institución:</label>
+                <input
+                type="text"
+                name="institucion_publica"
+                defaultValue="no aplica"
+                required
+                />
             </div>
             <label>Ingrese su número de certificación:</label>
-            <input type="text" name="numero_certificacion" required>
+            <input type="text" name="numero_certificacion" required/>
             <label>¿Es usted dermatólogo pediatra?</label>
             <div>
                 <label>Sí</label>
-                <input type="radio" name="es_dermatologo" value="si">
+                <input type="radio" name="es_dermatologo" value="si"/>
                 <label>No</label>
-                <input type="radio" name="es_dermatologo" value="no">
+                <input type="radio" name="es_dermatologo" value="no"/>
                 <div
                 style="display:none; margin-top:1.5rem;"
                 id="inputDisabledProfession"
                 >
-                    <label>Especifique:</label>
+                    <label>Especifique su especialidad:</label>
                     <input
                     type="text"
-                    name="institucion_publica"
+                    name="especialidad"
                     defaultValue="no aplica"
-                >
+                    required
+                    />
                 </div>
             </div>
             <button>Registrarse</button>
