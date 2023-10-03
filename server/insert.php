@@ -27,6 +27,7 @@ $institucion_publica= $_POST["institucion_publica"];
 $numero_certificacion= $_POST["numero_certificacion"];
 $es_dermatologo= $_POST["es_dermatologo"];
 $especialidad = $_POST["especialidad"];
+$es_paciente=$_POST["es_paciente"];
 $fecha_registro = date("Y-m-d");
 
 $sql = "INSERT INTO estudiantes(
@@ -39,6 +40,7 @@ $sql = "INSERT INTO estudiantes(
     numero_certificacion,
     es_dermatologo,
     especialidad,
+    es_paciente,
     fecha_registro
     )
 VALUES(
@@ -51,6 +53,7 @@ VALUES(
     '$numero_certificacion',
     '$es_dermatologo',
     '$especialidad',
+    '$es_paciente',
     '$fecha_registro'
 )
 ";
