@@ -1,4 +1,5 @@
 @import url('./styles/form.css');
+@import url('./styles/transmition.css');
 *{
     box-sizing: border-box;
     margin: 0;

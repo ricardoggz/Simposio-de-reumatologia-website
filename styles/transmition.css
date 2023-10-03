@@ -1,0 +1,22 @@
+.transmition{
+    background:#fff;
+    border-radius:10px;
+    box-shadow:1px 15px 60px #0000003c;
+    display:grid;
+    gap:0.5rem;
+    grid-template-columns:repeat(2, 1fr);
+    margin-top: 6rem;
+    padding:1.5rem;
+    width:70%;
+}
+.transmition-item{
+    height:450px;
+    width:100%;
+}
+
+@media(min-width:240px) and (max-width:880px){
+    .transmition{
+        grid-template-columns:repeat(1,1fr);
+        width:95%;
+    }
+}
