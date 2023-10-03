@@ -3,12 +3,19 @@ let radioProfession = document.querySelectorAll('input[type="radio"][name="es_de
 let inputDisabledInstitution = document.getElementById('inputDisabledInstitution');
 let inputDisabledProfession = document.getElementById('inputDisabledProfession');
 
+inputDisabledInstitution.disabled=true;
+inputDisabledInstitution.value='No aplica'
+
+inputDisabledProfession.disabled=true;
+inputDisabledProfession.value='No aplica'
+
 for (var i = 0; i < radioInstitution.length; i++) {
     radioInstitution[i].addEventListener('change', function() {
     if (this.value === 'si') {
-        inputDisabledInstitution.style.display = 'block';
+        inputDisabledInstitution.disabled = false;
     } else {
-        inputDisabledInstitution.style.display = 'none';
+        inputDisabledInstitution.disabled = true;
+        inputDisabledInstitution.value='No aplica';
     }
 });
 }
@@ -16,9 +23,10 @@ for (var i = 0; i < radioInstitution.length; i++) {
 for (var i = 0; i < radioProfession.length; i++) {
     radioProfession[i].addEventListener('change', function() {
     if (this.value === 'no') {
-        inputDisabledProfession.style.display = 'block';
+        inputDisabledProfession.disabled = false;
     } else {
-        inputDisabledProfession.style.display = 'none';
+        inputDisabledProfession.disabled = true;
+        inputDisabledProfession.value='No aplica';
     }
 });
 }

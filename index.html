@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
-    <title>Simposio internacional de reumatologia pediatrica</title>
+    <title>Registro</title>
 </head>
 <body>
     <section class="next">
@@ -33,15 +33,13 @@
                     value="no"
                 />
             </div>
-            <div
-            style="display:none; margin-top:1.5rem;"
-            id="inputDisabledInstitution"
-            >
+            <div>
                 <label>Especifique su institución:</label>
                 <input
                 type="text"
                 name="institucion_publica"
                 defaultValue="no aplica"
+                id="inputDisabledInstitution"
                 required
                 />
             </div>
@@ -53,20 +51,22 @@
                 <input type="radio" name="es_dermatologo" value="si"/>
                 <label>No</label>
                 <input type="radio" name="es_dermatologo" value="no"/>
-                <div
-                style="display:none; margin-top:1.5rem;"
-                id="inputDisabledProfession"
-                >
-                    <label>Especifique su especialidad:</label>
-                    <input
+            </div>
+            <div>
+                <label>Especifique su especialidad:</label>
+                <input
                     type="text"
                     name="especialidad"
                     defaultValue="no aplica"
+                    id="inputDisabledProfession"
                     required
                     />
-                </div>
             </div>
             <button>Registrarse</button>
+            
+            <div>
+                <p>¿Ya te has registrado? <a href="./ingresar.html">Ingresa aquí</a></span>
+            </div>
         </form>
     </section>
     <script src="./scripts/checkedInput.js"></script>
