@@ -54,7 +54,7 @@ VALUES(
 ";
 
 if (mysqli_query($conn, $sql)) {
-    echo "Los datos se han insertado correctamente en la base de datos.";
+    header("Location: ../simposio-internacional-reumatologia-pediatrica.html");
 } else {
     echo "Error al insertar datos: " . mysqli_error($conn);
 }
